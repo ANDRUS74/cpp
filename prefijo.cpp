@@ -3,6 +3,7 @@
 // las otras 2 en Debian 9 no hacen falta , en Debian 8 si
 //#include <string>
 //#include <iomanip>
+//#include <cstdlib>
 // compilado con :
 // g++ -O prefijo.cpp -o prefijo
 using namespace std;
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
 			if(!origen.compare("-t") || !origen.compare("--t") ) {
 				// Aca se llama a si mismo con el listado del directorio donde esta parado
         // usa bash queda como ejercicio tomar la lista de archivos desde c++
-				system(("ls -B -d -1 $PWD/*.* | ./prefijo \""+ cadena +"\" -i").c_str() );
+				system(("ls -d -1 $PWD/*.* | prefijo \""+ cadena +"\" -i").c_str() );
 				// me puedo evitar usar sanear con el comando  "ls -b -d -1" 
 			}else 
 				if(!origen.compare("-i")){
