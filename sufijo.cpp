@@ -3,6 +3,7 @@
 // las otras 2 en Debian 9 no hacen falta , en Debian 8 si
 //#include <string>
 //#include <iomanip>
+//#include <cstdlib>
 // compilado con :
 // g++ -O sufijo.cpp -o sufijo
 using namespace std;
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
 			std::cout << "  sufijo cadena "<< std::endl;
 			std::cout << "     Lee directo de la entrada estandard "<< std::endl;			
 			std::cout << "     debe ser la salida de un comando por ejm: "<< std::endl;		
-            std::cout << "             ./prefijo cp -t | ./sufijo /dir/ "<< std::endl;		
+            std::cout << "             prefijo cp -t | sufijo /dir/ "<< std::endl;		
 			std::cout << std::endl;
 			std::cout << "  Utilidad para agregar la cadena al final de cada linea recibida" << std::endl;
 			std::cout << std::endl;
